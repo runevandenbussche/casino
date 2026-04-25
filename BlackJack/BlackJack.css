@@ -6,7 +6,7 @@
 body {
     background: #1a6b5a;
     background-image:
-            radial-gradient(ellipse at 50% 30%, #22856e 0%, #0e4a3c 100%);
+    radial-gradient(ellipse at 50% 30%, #22856e 0%, #0e4a3c 100%);
     font-family: 'Lato', sans-serif;
     color: #fff;
     text-align: center;
