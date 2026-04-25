@@ -190,6 +190,15 @@ class BaccaratGame {
         this.bepaalWinnaar();
     }
 
+    nieuweRonde() {
+        this.clearKaarten();
+        document.getElementById('bankerScore').textContent = '';
+        document.getElementById('playerScore').textContent = '';
+        this.toonBericht('');
+        document.getElementById('chipBalk').style.display = 'flex';
+        document.getElementById('nieuweRondeBtn').style.display = 'none';
+    }
+
     bepaalWinnaar() {
         const ps = this.getHandScore(this.playerHand);
         const bs = this.getHandScore(this.bankerHand);
@@ -229,6 +238,9 @@ class BaccaratGame {
         if (this.gameState === "gameOver") {
             this.toonBericht('💸 Game Over! Geen chips meer.', '#ff6b6b');
         }
+
+        document.getElementById('chipBalk').style.display = 'none';
+        document.getElementById('nieuweRondeBtn').style.display = 'block';
     }
 }
 
@@ -237,4 +249,5 @@ var game = new BaccaratGame();
 function voegToe(bedrag)       { game.voegToe(bedrag); }
 function wisInzet()            { game.wisInzet(); }
 function dealCards()           { game.dealCards(); }
+function nieuweRonde()         { game.nieuweRonde(); }
 function setWeddenOp(keuze)    { game.setWeddenOp(keuze); }

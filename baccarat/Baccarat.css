@@ -151,6 +151,29 @@ h1 {
     font-weight: 400;
 }
 
+#bankerZone, #playerZone {
+    max-height: 160px;
+    overflow: hidden;
+}
+
+#nieuweRondeBtn {
+    background: linear-gradient(135deg, #f5c842, #d4a017);
+    border: none;
+    color: #1a1a1a;
+    border-radius: 10px;
+    padding: 14px 48px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 16px;
+    box-shadow: 0 4px 14px rgba(245,200,66,0.4);
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+#nieuweRondeBtn:hover { opacity: 0.88; transform: scale(1.05); }
+
 .wed-knop:hover {
     background: rgba(245,200,66,0.15);
     border-color: #f5c842;
