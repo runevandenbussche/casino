@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Baccarat</title>
+    <link rel="stylesheet" href="Baccarat.css">
+</head>
+<body>
+
+<h1>Baccarat</h1>
+
+<div id="bankerZone">
+    <div class="zone-label">Bank</div>
+    <div id="kaartenBanker"></div>
+    <div id="bankerScore"></div>
+</div>
+
+<div id="playerZone">
+    <div class="zone-label">Speler</div>
+    <div id="kaartenPlayer"></div>
+    <div id="playerScore"></div>
+</div>
+
+<div id="berichtDisplay"></div>
+
+<div id="chipBalk">
+
+    <!-- Wedden op knoppen -->
+    <div id="wedKnoppen">
+        <button class="wed-knop" id="wed-player"  onclick="setWeddenOp('player')">Speler</button>
+        <button class="wed-knop" id="wed-tie"     onclick="setWeddenOp('tie')">Gelijkspel<br><small>8:1</small></button>
+        <button class="wed-knop" id="wed-banker"  onclick="setWeddenOp('banker')">Bank<br><small>-5%</small></button>
+    </div>
+
+    <div id="chipRij">
+        <button class="chip chip-groen"  onclick="voegToe(5)"><span class="chip-label">$5</span></button>
+        <button class="chip chip-paars"  onclick="voegToe(10)"><span class="chip-label">$10</span></button>
+        <button class="chip chip-roze"   onclick="voegToe(25)"><span class="chip-label">$25</span></button>
+        <button class="chip chip-rood"   onclick="voegToe(100)"><span class="chip-label">$100</span></button>
+    </div>
+
+    <div id="bankEnBet">
+        <div id="bankDisplay">BANK <span id="bankBedrag">$1000</span></div>
+        <div id="betDisplay">BET <span id="betBedrag">$0</span></div>
+    </div>
+
+    <div id="betKnoppen">
+        <button id="wisBtn"  onclick="wisInzet()">✕ Wis</button>
+        <button id="dealBtn" onclick="dealCards()">DEAL</button>
+    </div>
+
+</div>
+
+<script src="../blackjack/modules/Card.js"></script>
+<script src="../blackjack/modules/Deck.js"></script>
+<script src="../blackjack/modules/Hand.js"></script>
+<script src="modules/BaccaratGame.js"></script>
+</body>
+</html>

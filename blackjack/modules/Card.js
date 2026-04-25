@@ -34,6 +34,6 @@ class Card {
         const suit = suitMap[this.suit];
         const value = valueMap[this.value] || this.value; // gewone nummers blijven hetzelfde
 
-        return `kaarten/${suit}-${value}.svg`;
+        return `../../kaarten/${suit}-${value}.svg`;
     }
 }
