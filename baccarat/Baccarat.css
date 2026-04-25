@@ -156,6 +156,29 @@ h1 {
     overflow: hidden;
 }
 
+#terugKnop {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: all 0.2s;
+}
+
+#terugKnop:hover {
+    color: #f5c842;
+    border-color: #f5c842;
+    background: rgba(0,0,0,0.5);
+}
+
 #nieuweRondeBtn {
     background: linear-gradient(135deg, #f5c842, #d4a017);
     border: none;
