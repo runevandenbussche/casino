@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>BlackJack</title>
+    <link rel="stylesheet" href="BlackJack.css">
+</head>
+<body>
+
+<h1>Blackjack</h1>
+
+<div id="dealerZone">
+    <div class="zone-label">Dealer</div>
+    <div id="kaartenDealer"></div>
+    <div id="dealerScore"></div>
+</div>
+
+
+<div id="playerZone">
+    <div class="zone-label">Speler</div>
+    <div id="kaartenPlayer"></div>
+    <div id="playerScore"></div>
+</div>
+
+<div id="berichtDisplay"></div>
+<div id="chipBalk">
+    <div id="chipRij">
+        <button class="chip chip-groen"  onclick="voegToe(5)"><span class="chip-label">$5</span></button>
+        <button class="chip chip-paars"  onclick="voegToe(10)"><span class="chip-label">$10</span></button>
+        <button class="chip chip-roze"   onclick="voegToe(25)"><span class="chip-label">$25</span></button>
+        <button class="chip chip-rood"   onclick="voegToe(100)"><span class="chip-label">$100</span></button>
+    </div>
+    <div id="bankEnBet">
+        <div id="bankDisplay">BANK <span id="bankBedrag">$1000</span></div>
+        <div id="betDisplay">BET<span id="betBedrag">$0</span></div>
+    </div>
+
+    <div id="betKnoppen">
+        <button id="wisBtn"  onclick="wisInzet()">✕ Wis</button>
+        <button id="dealBtn" onclick="dealCards()">DEAL</button>
+    </div>
+
+    <div id="actieKnoppen">
+        <button id="hit"    onclick="playerHit()">HIT</button>
+        <button id="stand"  onclick="playerStand()">STAND</button>
+        <button id="double" onclick="playerDouble()">DOUBLE</button>
+        <button id="split"  onclick="playerSplit()">SPLIT</button>
+    </div>
+</div>
+
+
+<script src="modules/Card.js"></script>
+<script src="modules/Deck.js"></script>
+<script src="modules/Hand.js"></script>
+<script src="modules/Player.js"></script>
+<script src="modules/Dealer.js"></script>
+<script src="modules/BlackJackGame.js"></script>
+</body>
+</html>
